@@ -18,6 +18,23 @@ module.exports = function (mongoose) {
             trim: true,
             required: [true, 'password is required']
         },
+        province: {
+            type: String,
+            trim: true,
+            required: [true, 'province is required']
+        },
+        district: {
+            type: String,
+            trim: true,
+            required: [true, 'district is required']
+        },
+        role: {
+            type: String,
+            trim: true,
+            required: [true, 'role is required'],
+            enum: ['student', 'coach', 'staff', 'teacher', 'news'],
+            default: 'student'
+        },
         token: {
             type: String,
             trim: true,
