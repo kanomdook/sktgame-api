@@ -1,0 +1,26 @@
+{
+  "name": "sktgame-api",
+  "version": "1.0.0",
+  "description": "api",
+  "main": "app.js",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "kanung hoksang",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "glob": "^7.1.2",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.6",
+    "request": "^2.87.0"
+  }
+}
