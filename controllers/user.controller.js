@@ -37,7 +37,9 @@ exports.signup = function (req, res, next) {
 };
 
 exports.edit = function (req, res, next) {
-    req.body.password = generate.encrypt(req.body.password);
+    if (req.body.changedPassword) {
+        req.body.password = generate.encrypt(req.body.password);
+    }
     userModel.findByIdAndUpdate(req.userID, req.body, { new: true }).exec(function (err, result) {
         if (err) {
             res.status(404).json(handle.error(err));
