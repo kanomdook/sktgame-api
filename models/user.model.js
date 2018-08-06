@@ -35,6 +35,12 @@ module.exports = function (mongoose) {
             enum: ['student', 'coach', 'staff', 'teacher', 'news'],
             default: 'student'
         },
+        gender: {
+            type: String,
+            trim: true,
+            enum: ['ชาย', 'หญิง'],
+            default: ''
+        },
         profileImg: {
             id: {
                 type: String,
