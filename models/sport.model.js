@@ -17,6 +17,13 @@ module.exports = function (mongoose) {
             trim: true,
             required: [true, 'age is required']
         },
+        gender: {
+            type: String,
+            trim: true,
+            required: [true, 'gender is required'],
+            enum: ['ชาย', 'หญิง', 'ชาย/หญิง'],
+            default: 'ชาย/หญิง'
+        },
         createDate: {
             type: Date,
             trim: true,
