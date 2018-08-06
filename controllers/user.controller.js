@@ -48,7 +48,7 @@ exports.userData = function (req, res) {
 
 exports.setNewToken = function (req, res) {
     var token = generate.token(req.userid);
-    userModel.findByIdAndUpdate(req.userid, { $set: { token: token } }, { new: true, fields: { name: 1, email: 1, token: 1, role: 1, province: 1, district: 1 } }).exec(function (err, result) {
+    userModel.findByIdAndUpdate(req.userid, { $set: { token: token } }, { new: true, fields: { password: -1 } }).exec(function (err, result) {
         if (err) {
             res.status(404).json(handle.error(err));
         } else {

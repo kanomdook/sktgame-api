@@ -35,6 +35,46 @@ module.exports = function (mongoose) {
             enum: ['student', 'coach', 'staff', 'teacher', 'news'],
             default: 'student'
         },
+        profileImg: {
+            id: {
+                type: String,
+                trim: true,
+                default: ''
+            },
+            url: {
+                type: String,
+                trim: true,
+                default: ''
+            }
+        },
+        citizenImg: {
+            id: {
+                type: String,
+                trim: true,
+                default: ''
+            },
+            url: {
+                type: String,
+                trim: true,
+                default: ''
+            }
+        },
+        weight: {
+            type: Number,
+            default: 0
+        },
+        height: {
+            type: Number,
+            default: 0
+        },
+        age: {
+            type: Number,
+            default: 0
+        },
+        birthday: {
+            type: String,
+            default: ''
+        },
         token: {
             type: String,
             trim: true,
