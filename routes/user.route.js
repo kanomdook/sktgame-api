@@ -11,5 +11,8 @@ module.exports = function (router) {
     router.route('/user/:userid')
         .get(auth.verify, userCtrl.userData);
 
+    router.route('/user/:userid')
+        .put(userCtrl.edit, userCtrl.setNewToken);
+
     router.param('userid', userCtrl.getUserID);
 };
