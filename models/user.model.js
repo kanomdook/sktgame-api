@@ -72,8 +72,18 @@ module.exports = function (mongoose) {
             default: 0
         },
         birthday: {
-            type: String,
-            default: ''
+            day: {
+                type: Number,
+                default: 0
+            },
+            month: {
+                type: Number,
+                default: 0
+            },
+            year: {
+                type: Number,
+                default: 0
+            }
         },
         token: {
             type: String,
