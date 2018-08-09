@@ -31,9 +31,8 @@ module.exports = function (mongoose) {
         role: {
             type: String,
             trim: true,
-            required: [true, 'role is required'],
-            enum: ['student', 'coach', 'staff', 'teacher', 'news'],
-            default: 'student'
+            enum: ['student', 'coach', 'staff', 'teacher', 'news', ''],
+            default: ''
         },
         gender: {
             type: String,
