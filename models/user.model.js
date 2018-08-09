@@ -18,6 +18,11 @@ module.exports = function (mongoose) {
             trim: true,
             required: [true, 'password is required']
         },
+        tel: {
+            type: String,
+            trim: true,
+            default: ''
+        },
         province: {
             type: String,
             trim: true,
