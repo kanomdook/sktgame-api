@@ -37,8 +37,8 @@ module.exports = function (mongoose) {
         gender: {
             type: String,
             trim: true,
-            enum: ['ชาย', 'หญิง'],
-            default: ''
+            enum: ['ชาย', 'หญิง', 'unselect'],
+            default: 'unselect'
         },
         profileImg: {
             id: {
